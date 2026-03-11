@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap');
+
+.app-container {
+  font-family: 'Lexend', sans-serif;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Adaptive Mode Styles */
+.dyslexia-mode {
+  background-color: #f5f2e7; /* Cream background reduces glare */
+  letter-spacing: 0.12em;
+  word-spacing: 0.3em;
+  line-height: 2;
+}
+
+.content-card {
+  max-width: 700px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.bionic-word b {
+  font-weight: 800;
+  color: #000;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Add this to App.css */
+.reading-ruler {
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  background: rgba(255, 255, 0, 0.2); /* Transparent yellow */
+  pointer-events: none; /* Let clicks pass through it */
+  z-index: 999;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  transform: translateY(-50%);
+}
+.suggestion-box {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #2196f3;
+  text-align: left;
+}
+
+.button-group {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  z-index: 20; /* Keep buttons above the ruler */
+}
+
+.text-display {
+  font-size: 1.4rem;
+  color: #333;
+  text-align: left;
+}
+.navigation-footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.text-display {
+  text-align: left;
+  min-height: 250px;
+}
+.adaptive-prompt {
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ff9800;
+  margin-top: 20px;
+  text-align: left;
+  animation: slideIn 0.4s ease-out;
+}
+
+.adaptive-prompt button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+
+.navigation-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #4CAF50;
+  transition: width 0.4s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
